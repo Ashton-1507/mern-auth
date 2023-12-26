@@ -8,16 +8,17 @@ import Profile from './pages/Profile';
 import Header from './components/components/Header';
 
 export default function App() { 
-  return( <BrowserRouter> 
-  {/*header*/}
-  <Header></Header>
-  <Routes>
-    <Route path="/" element={<Home />}></Route>
-    <Route path="/about" element={<About />}></Route>
-    <Route path="/sign-in" element={<SignIn />}></Route>
-    <Route path="/sign-up" element={<SignUp />}></Route>
-    <Route path="/profile" element={<Profile />}></Route>
-  </Routes>
+  return( 
+  <BrowserRouter> 
+    {/*header*/}
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/about" element={<About />}></Route>
+      <Route path="/sign-in" element={<SignIn />}></Route>
+      <Route path="/sign-up" element={<SignUp />}></Route>
+      <Route path="/profile" element={<Profile />}></Route>
+    </Routes>
   </BrowserRouter>
   );
 }
