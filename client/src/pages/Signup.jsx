@@ -13,10 +13,11 @@ export default function Signup() {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    try{
+    try
+    {
       setLoading(true);
       setError(false);
-    const response = await fetch('/api/auth/signup',{
+      const response = await fetch('/api/auth/signup',{
       method:'POST',
       headers:{
         'Content-Type':'application/json',
@@ -26,7 +27,8 @@ export default function Signup() {
     const data = await response.json();
     console.log(data);
     setLoading(false);
-    if(data.sucess === false){
+    if(data.sucess === false)
+    {
       setError(true);
       return;
     }
@@ -37,7 +39,7 @@ export default function Signup() {
     setError(true);
   }
   };
-
+  
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl text-center font-semibold my-7'>Sign Up</h1>
