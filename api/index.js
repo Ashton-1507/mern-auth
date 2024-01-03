@@ -27,10 +27,10 @@ app.use("/api/auth",authRoutes);
 
 app.use((err,req,res,next) => {
     const statusCode = err.statusCode || 500;
-    const msg = err.message || 'Internal Servor Error';
+    const message = err.message || 'Internal Servor Error';
     return res.status(statusCode).json({
-        sucess:false,
-        msg,
+        success:false,
+        message,
         statusCode,
     });
 });
